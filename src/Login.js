@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+//require('dotenv').config();
 
 // Updating Logi.js
 
 <Link to='/reg'>Registration</Link>
 
 function Login() {
+    const apiUrl =  import.meta.env.API_URL;
+
   const [formData, setFormData] = useState({
 
     email: '',
@@ -43,6 +46,8 @@ function Login() {
 
   const handleFormSubmit = async (e)=>{
       e.preventDefault();
+      console.log( process.env.REACT_APP_API_URL);
+      alert(process.env.REACT_APP_API_URL)
       try{
         const response = await fetch('api', {
           method:'post',
