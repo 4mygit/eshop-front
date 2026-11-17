@@ -1,8 +1,15 @@
  import { Link } from "react-router-dom";
+ import React, {useState} from "react";
+
+// Updating Logi.js
 
  <Link to='/reg'>Registration</Link>
 
 function Login(){
+  const [formData,setFormData] = useState({
+    username:'',
+    email:''
+  })
 
     return (
 <>
